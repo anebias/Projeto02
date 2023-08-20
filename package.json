@@ -1,0 +1,37 @@
+{
+  "name": "projeto02",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
+    "migrate:create": "npm run knex -- migrate:make --migrations-directory ./db/migrations -x ts",
+    "Lint": "eslint src --ext .ts --fix",
+    "test": "vitest",
+    "build": "tsup src --out-dir build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "@types/node": "^20.5.1",
+    "@types/supertest": "^2.0.12",
+    "eslint": "^8.47.0",
+    "supertest": "^6.3.3",
+    "ts-node": "^10.9.1",
+    "tsup": "^7.2.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.2"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.0.4",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.21.0",
+    "knex": "^2.5.1",
+    "sqlite3": "^5.1.6",
+    "zod": "^3.22.2"
+  },
+  "description": ""
+}
